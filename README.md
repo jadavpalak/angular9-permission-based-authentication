@@ -29,5 +29,5 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
 
 ## Reference link and explanation
 
-https://devblogs.microsoft.com/premier-developer angular-how-to-implement-role-based-security/
+https://devblogs.microsoft.com/premier-developer/angular-how-to-implement-role-based-security/
 
