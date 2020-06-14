@@ -1,0 +1,8 @@
+<mat-list role="list">
+    <ng-container *ngFor="let item of menus">
+        <mat-list-item [routerLink]="item.routerLink"  role="listitem">
+            <mat-icon>{{item.icon}}</mat-icon> {{item.name}}
+        </mat-list-item>
+        <mat-divider></mat-divider>
+    </ng-container>
+</mat-list>

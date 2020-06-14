@@ -1,0 +1,22 @@
+.user-container {
+    margin-top: 80px;
+    width: 100%;
+    padding: 40px 30px;
+    .user-card {
+      max-width: 1164px;
+      .sector-card-header {
+        padding: 20px;
+        display: flex;
+        justify-content: space-between;
+      }
+      .sector_table-container {
+        max-height: 750px;
+        overflow: auto;
+  
+        table {
+          width: 100%;
+        }
+      }
+    }
+  }
+  

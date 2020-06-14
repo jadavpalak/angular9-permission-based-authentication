@@ -1,0 +1,22 @@
+.container {
+  padding: 100px 450px 0 450px;
+  .login-card {
+    max-width: 500px;
+    height: 350px;
+    .mat-card-content {
+      .login-form {
+        .mat-form-field {
+          width: 100%;
+        }
+        .extra-field {
+          justify-content: space-between;
+          display: flex;
+          padding-bottom: 20px;
+        }
+        .forgot-password {
+          text-align: right;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,19 @@
+<!-- Toolbar -->
+<div class="toolbar" role="banner">
+  <button mat-button (click)="toggleClicked()" class="sidenav-toggle-btn">
+      <mat-icon>
+          menu
+      </mat-icon>
+  </button>
+  <!-- <span class="menu-name" [routerLink]="['/dashboard']" routerLinkActive="router-link-active">Dashboard</span> -->
+  <div class="spacer"></div>
+  <button mat-button [matMenuTriggerFor]="beforeMenu">
+      <img class="user-header-image" src="https://material.angular.io/assets/img/examples/shiba1.jpg" />
+      Abc Xyz
+      <mat-icon>keyboard_arrow_down</mat-icon>
+  </button>
+  <mat-menu #beforeMenu="matMenu" xPosition="before">
+      <button mat-menu-item>Update Profile</button>
+      <button mat-menu-item (click)="logout()">Logout</button>
+  </mat-menu>
+</div>

@@ -1,0 +1,52 @@
+.example-header-image {
+  background-size: cover;
+}
+
+.spacer {
+  flex: 1;
+}
+
+.toolbar {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  font-weight: 600;
+  background-color: white;
+  .sidenav-toggle-btn {
+    mat-icon {
+      font-size: 36px;
+      margin-bottom: 12px;
+    }
+  }
+
+  .user-header-image {
+    background-size: cover;
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+    flex-shrink: 0;
+    object-fit: cover;
+  }
+
+  .menu-name {
+    margin: 0 16px;
+  }
+
+  ::ng-deep {
+    .nav-wrapper {
+      display: inline-flex !important;
+    }
+  }
+}
+
+.toolbar img {
+  margin: 0 16px;
+}
+
+.toolbar img {
+  margin: 0 16px;
+}

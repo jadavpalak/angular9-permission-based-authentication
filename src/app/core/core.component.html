@@ -1,0 +1,9 @@
+<mat-sidenav-container class="app-container">
+    <mat-sidenav #sidenav mode="side" opened class="app-sidenav" [fixedInViewport]="true">
+      <my-app-side-bar></my-app-side-bar>
+    </mat-sidenav>
+    <mat-sidenav-content>
+      <my-app-header (toggleClick)="sidenav.toggle()"></my-app-header>
+      <router-outlet></router-outlet>
+    </mat-sidenav-content>
+  </mat-sidenav-container>

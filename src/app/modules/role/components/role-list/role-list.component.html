@@ -1,0 +1,50 @@
+<div class="user-container">
+    <mat-card class="user-card">
+        <mat-card-header class="sector-card-header">
+            <mat-card-title>Users List</mat-card-title>
+            <button mat-flat-button color="primary" [routerLink]="['/sector/add']"
+                routerLinkActive="router-link-active" [myHideIfUnauthorized]="'user-add'">+Add</button>
+        </mat-card-header>
+        <mat-card-content>
+            <div class="sector_header-action">
+                <div class="filter-section">
+                    <div class="left-block">
+                        <mat-form-field appearance="outline">
+                            <mat-label>Filter</mat-label>
+                            <input matInput (keyup)="applyFilter($event)" placeholder="Ex. ium">
+                        </mat-form-field>
+                    </div>
+                </div>
+            </div>
+            <div class="sector_table-container mat-elevation-z8 listing-table">
+                <table mat-table [dataSource]="dataSource">
+
+                    <!-- Id Column -->
+                    <ng-container matColumnDef="id">
+                        <th mat-header-cell *matHeaderCellDef> No. </th>
+                        <td mat-cell *matCellDef="let element"> {{element.id}} </td>
+                    </ng-container>
+
+                    <!-- Name Column -->
+                    <ng-container matColumnDef="name">
+                        <th mat-header-cell *matHeaderCellDef> Name </th>
+                        <td mat-cell *matCellDef="let element"> {{element.name}} </td>
+                    </ng-container>
+
+                    <!-- Status Column -->
+                    <ng-container matColumnDef="status">
+                        <th mat-header-cell *matHeaderCellDef> Name </th>
+                        <td mat-cell *matCellDef="let element">
+                            <button mat-button color="primary">Active</button>
+                        </td>
+                    </ng-container>
+
+                    <tr mat-header-row *matHeaderRowDef="displayedColumns;sticky: true"></tr>
+                    <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+                </table>
+
+                <mat-paginator [pageSizeOptions]="[5, 10, 20]" showFirstLastButtons></mat-paginator>
+            </div>
+        </mat-card-content>
+    </mat-card>
+</div>

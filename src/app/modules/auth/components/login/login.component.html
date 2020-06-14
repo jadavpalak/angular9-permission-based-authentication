@@ -1,0 +1,53 @@
+<div class="container">
+    <mat-card class="login-card">
+        <div class="logo">
+            <a href="#" title="logo"><img src="assets/images/logo.png" alt=""></a>
+        </div>
+        <mat-card-header>
+            <mat-card-title>Login to your Account</mat-card-title>
+            <mat-card-subtitle>Username: test@example.com</mat-card-subtitle>
+            <mat-card-subtitle>Password: secret</mat-card-subtitle>
+        </mat-card-header>
+        <mat-card-content>
+            <form class="login-form" [formGroup]="loginFrom" (ngSubmit)="onSubmit()">
+
+                <mat-form-field appearance="fill" class="app-input--max">
+                    <mat-label>Enter your email</mat-label>
+                    <input type="text" matInput placeholder="abc@example.com" value="" class="phone_number"
+                        formControlName="email" autofocus>
+                </mat-form-field>
+                <mat-error class="text-left"
+                    *ngIf="loginFrom.get('email').hasError('required') && loginFrom.get('email').touched">
+                    Email is required.
+                </mat-error>
+
+                <mat-form-field appearance="fill" class="app-input--max has-password">
+                    <mat-label translate>Password</mat-label>
+                    <input matInput [type]="show ? 'text' : 'password'" placeholder="*******" formControlName="password"
+                        trim>
+                </mat-form-field>
+                <mat-error class="text-left"
+                    *ngIf="loginFrom.get('password').hasError('required') && (loginFrom.get('password').touched)">
+                    Password is required.
+                </mat-error>
+
+                <div class="extra-field">
+                    <label class="custom-checkbox">Remember Me
+                        <input type="checkbox">
+                        <span class="checkmark"></span>
+                    </label>
+
+                    <a [routerLink]="['/forgot-password']" routerLinkActive="router-link-active"
+                        class="text-underline forgot-password" title="Forgot Password">Forgot
+                        Password?</a>
+                </div>
+
+                <div class="text-center back-btn">
+                    <button type="submit" mat-stroked-button
+                        class="login-btn mat-raised-button mat-button-base mat-primary btn text-uppercase">Log
+                        in</button>
+                </div>
+            </form>
+        </mat-card-content>
+    </mat-card>
+</div>
