@@ -22,7 +22,7 @@
     "@angular/platform-browser": "~9.1.6",
     "@angular/platform-browser-dynamic": "~9.1.6",
     "@angular/router": "~9.1.6",
-    "moment": "^2.25.3",
+    "moment": "^2.29.2",
     "ngx-cookie-service": "^3.0.4",
     "ngx-toastr": "^12.1.0",
     "rxjs": "~6.5.4",
